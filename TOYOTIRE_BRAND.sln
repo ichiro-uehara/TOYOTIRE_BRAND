@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "作業報告書", "作業報告書", "{DFFD7FA2-AE95-488A-91B2-E190387FE853}"
+	ProjectSection(SolutionItems) = preProject
+		作業報告書\AdvanceCAD⇒AutoCAD移行開発（要件定義）_作業報告書.xlsx = 作業報告書\AdvanceCAD⇒AutoCAD移行開発（要件定義）_作業報告書.xlsx
+		作業報告書\AdvanceCAD⇒AutoCAD移行開発（要件定義）_作業報告書_山本.xlsx = 作業報告書\AdvanceCAD⇒AutoCAD移行開発（要件定義）_作業報告書_山本.xlsx
+		作業報告書\AdvanceCAD⇒AutoCAD移行開発（要件定義）_作業報告書_岡田.xlsx = 作業報告書\AdvanceCAD⇒AutoCAD移行開発（要件定義）_作業報告書_岡田.xlsx
+		作業報告書\AdvanceCAD⇒AutoCAD移行開発（要件定義）_作業報告書_平.xlsx = 作業報告書\AdvanceCAD⇒AutoCAD移行開発（要件定義）_作業報告書_平.xlsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "調査資料", "調査資料", "{7AF23B3E-AD8C-43D6-A96F-3C35F48E9178}"
+	ProjectSection(SolutionItems) = preProject
+		調査資料\カスタム仕様書_SC理解.xlsx = 調査資料\カスタム仕様書_SC理解.xlsx
+		調査資料\カスタム仕様書_SC理解_山本.xlsx = 調査資料\カスタム仕様書_SC理解_山本.xlsx
+		調査資料\カスタム仕様書_SC理解_岡田.xlsx = 調査資料\カスタム仕様書_SC理解_岡田.xlsx
+		調査資料\カスタム仕様書_SC理解_平.xlsx = 調査資料\カスタム仕様書_SC理解_平.xlsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "要件定義書", "要件定義書", "{1B267D3E-CA7B-4011-8A1D-8B2FCC480910}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ドキュメント", "ドキュメント", "{E7774FD6-24FE-4B83-9667-A37465E08C9C}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ECF83A36-EF44-40AF-A263-56C5F6448557}
+	EndGlobalSection
+EndGlobal
