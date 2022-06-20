@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32602.291
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "作業報告書", "作業報告書", "{DFFD7FA2-AE95-488A-91B2-E190387FE853}"
 	ProjectSection(SolutionItems) = preProject
@@ -20,8 +20,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "調査資料", "調査資�
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "要件定義書", "要件定義書", "{1B267D3E-CA7B-4011-8A1D-8B2FCC480910}"
+	ProjectSection(SolutionItems) = preProject
+		要件定義書\①_円弧配列_カスタム仕様書.docx = 要件定義書\①_円弧配列_カスタム仕様書.docx
+		要件定義書\②_パタ検(ボイド測定)_カスタム仕様.docx = 要件定義書\②_パタ検(ボイド測定)_カスタム仕様.docx
+		要件定義書\③_TM登録_カスタム仕様.docx = 要件定義書\③_TM登録_カスタム仕様.docx
+		要件定義書\④_面積変動_カスタム仕様.docx = 要件定義書\④_面積変動_カスタム仕様.docx
+		要件定義書\⑤_位相ズレ解析_カスタム仕様.docx = 要件定義書\⑤_位相ズレ解析_カスタム仕様.docx
+		要件定義書\⑥_C表作成_カスタム仕様.docx = 要件定義書\⑥_C表作成_カスタム仕様.docx
+		要件定義書\⑦_承認申請図・法規申請図_カスタム仕様.docx = 要件定義書\⑦_承認申請図・法規申請図_カスタム仕様.docx
+		要件定義書\⑧_解析用データ変換_カスタム仕様.docx = 要件定義書\⑧_解析用データ変換_カスタム仕様.docx
+		要件定義書\⑨_AT gi-2／Leon expansion_カスタム仕様_REV01.docx = 要件定義書\⑨_AT gi-2／Leon expansion_カスタム仕様_REV01.docx
+		要件定義書\⑩_Macro 1-1_カスタム仕様.docx = 要件定義書\⑩_Macro 1-1_カスタム仕様.docx
+		要件定義書\⑫_作図マクロ_カスタム仕様.docx = 要件定義書\⑫_作図マクロ_カスタム仕様.docx
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ドキュメント", "ドキュメント", "{E7774FD6-24FE-4B83-9667-A37465E08C9C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "質疑表", "質疑表", "{E7774FD6-24FE-4B83-9667-A37465E08C9C}"
+	ProjectSection(SolutionItems) = preProject
+		質疑表\TOYOTIRE_質疑表 _岡田.xlsx = 質疑表\TOYOTIRE_質疑表 _岡田.xlsx
+		質疑表\TOYOTIRE_質疑表 _平.xlsx = 質疑表\TOYOTIRE_質疑表 _平.xlsx
+		質疑表\TOYOTIRE_質疑表.xlsx = 質疑表\TOYOTIRE_質疑表.xlsx
+		質疑表\TOYOTIRE_質疑表_山本.xlsx = 質疑表\TOYOTIRE_質疑表_山本.xlsx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
