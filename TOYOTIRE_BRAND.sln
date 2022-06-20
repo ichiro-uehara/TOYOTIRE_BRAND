@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.852
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "作業報告書", "作業報告書", "{DFFD7FA2-AE95-488A-91B2-E190387FE853}"
 	ProjectSection(SolutionItems) = preProject
@@ -42,9 +42,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "質疑表", "質疑表", "{
 		質疑表\TOYOTIRE_質疑表_山本.xlsx = 質疑表\TOYOTIRE_質疑表_山本.xlsx
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "内部資料", "内部資料", "{F399522D-5179-401D-81E1-28C3BA582938}"
+	ProjectSection(SolutionItems) = preProject
+		調査資料\内部資料\①円弧配列調査（平）.xlsx = 調査資料\内部資料\①円弧配列調査（平）.xlsx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F399522D-5179-401D-81E1-28C3BA582938} = {7AF23B3E-AD8C-43D6-A96F-3C35F48E9178}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ECF83A36-EF44-40AF-A263-56C5F6448557}
