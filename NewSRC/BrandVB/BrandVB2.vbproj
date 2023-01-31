@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <MyType>WindowsForms</MyType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{01D90623-6187-4E98-A35F-33343639A195}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>BrandVB2</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BrandVB2.F_MAIN2</StartupObject>
+    <AssemblyMajorVersion>1</AssemblyMajorVersion>
+    <AssemblyMinorVersion>0</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>0</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>False</GenerateRevisionNumber>
+    <AssemblyCompanyName>softcube</AssemblyCompanyName>
+    <RootNamespace>BrandVB2</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>BrandVB2.xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True,PJ_BrandVB2=True</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>BrandVB2.xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True,PJ_BrandVB2=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <COMReference Include="RDO">
+      <Guid>{EE008642-64A8-11CE-920F-08002B369A33}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility">
+      <Name>Microsoft.VisualBasic.Compatibility</Name>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="AxMSFlexGridLib">
+      <Guid>{5E9E78A0-531B-11CF-91F6-C2863C385E30}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSFlexGridLib">
+      <Guid>{5E9E78A0-531B-11CF-91F6-C2863C385E30}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.VisualBasic.Compatibility" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\vblib\VBLIB.vb">
+      <Link>VBLIB.vb</Link>
+    </Compile>
+    <Compile Include="..\vblib\VBRDO.vb">
+      <Link>VBRDO.vb</Link>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="BrandDLL.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="bz.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="check.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="check_f.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clear.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data_set.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="date.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="env_get.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="F_MSG.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>F_MSG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="F_MSG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_MSG3.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>F_MSG3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="F_MSG3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="global.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gz.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="hz.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Init.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWin2.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>MainWin2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainWin2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sel_win2.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>sel_win2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sel_win2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpgradeSupport.vb" />
+    <Compile Include="Utl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="what.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ブランド図面内容確認.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>ブランド図面内容確認.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ブランド図面内容確認.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ブランド図面削除.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>ブランド図面削除.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ブランド図面削除.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ブランド図面登録.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>ブランド図面登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ブランド図面登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="刻印図面内容確認.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>刻印図面内容確認.vb</DependentUpon>
+    </Compile>
+    <Compile Include="刻印図面内容確認.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="刻印図面削除.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>刻印図面削除.vb</DependentUpon>
+    </Compile>
+    <Compile Include="刻印図面削除.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="刻印図面登録.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>刻印図面登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="刻印図面登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="図面ブランド検索.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>図面ブランド検索.vb</DependentUpon>
+    </Compile>
+    <Compile Include="図面ブランド検索.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="図面呼出し.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>図面呼出し.vb</DependentUpon>
+    </Compile>
+    <Compile Include="図面呼出し.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="図面番号検索.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>図面番号検索.vb</DependentUpon>
+    </Compile>
+    <Compile Include="図面番号検索.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="図面要素検索.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>図面要素検索.vb</DependentUpon>
+    </Compile>
+    <Compile Include="図面要素検索.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="編集文字図面内容確認.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>編集文字図面内容確認.vb</DependentUpon>
+    </Compile>
+    <Compile Include="編集文字図面内容確認.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="編集文字図面削除.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>編集文字図面削除.vb</DependentUpon>
+    </Compile>
+    <Compile Include="編集文字図面削除.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="編集文字図面登録.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>編集文字図面登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="編集文字図面登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="通信.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="F_MSG.resX">
+      <DependentUpon>F_MSG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_MSG3.resX">
+      <DependentUpon>F_MSG3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWin2.resX">
+      <DependentUpon>MainWin2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sel_win2.resX">
+      <DependentUpon>sel_win2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ブランド図面内容確認.resX">
+      <DependentUpon>ブランド図面内容確認.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ブランド図面削除.resX">
+      <DependentUpon>ブランド図面削除.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ブランド図面登録.resX">
+      <DependentUpon>ブランド図面登録.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="刻印図面内容確認.resX">
+      <DependentUpon>刻印図面内容確認.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="刻印図面削除.resX">
+      <DependentUpon>刻印図面削除.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="刻印図面登録.resX">
+      <DependentUpon>刻印図面登録.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="図面ブランド検索.resX">
+      <DependentUpon>図面ブランド検索.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="図面呼出し.resX">
+      <DependentUpon>図面呼出し.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="図面番号検索.resX">
+      <DependentUpon>図面番号検索.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="図面要素検索.resX">
+      <DependentUpon>図面要素検索.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="編集文字図面内容確認.resX">
+      <DependentUpon>編集文字図面内容確認.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="編集文字図面削除.resX">
+      <DependentUpon>編集文字図面削除.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="編集文字図面登録.resX">
+      <DependentUpon>編集文字図面登録.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

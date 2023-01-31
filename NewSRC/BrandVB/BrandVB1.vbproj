@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <MyType>WindowsForms</MyType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F473FCBF-69D1-4127-8610-589E5F79E251}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>BrandVB1</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BrandVB1.F_MAIN1</StartupObject>
+    <AssemblyMajorVersion>1</AssemblyMajorVersion>
+    <AssemblyMinorVersion>0</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>0</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>False</GenerateRevisionNumber>
+    <AssemblyCompanyName>softcube</AssemblyCompanyName>
+    <RootNamespace>BrandVB1</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>BrandVB1.xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True,PJ_BrandVB1=True</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>BrandVB1.xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True,PJ_BrandVB1=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.Compatibility">
+      <Name>Microsoft.VisualBasic.Compatibility</Name>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.VisualBasic.Compatibility" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SRC\vblib\VBADO.vb">
+      <Link>VBADO.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SRC\vblib\VBLIB.vb">
+      <Link>VBLIB.vb</Link>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="BrandDLL.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="check.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="check_f.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clear.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data_set.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="date.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="env_get.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="F_MSG.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>F_MSG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="F_MSG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_MSG3.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>F_MSG3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="F_MSG3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="global.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gm.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="hm.vb" />
+    <Compile Include="Init.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWin1.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>MainWin1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainWin1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sel_win1.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>sel_win1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sel_win1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpgradeSupport.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="what.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="原始文字検索.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>原始文字検索.vb</DependentUpon>
+    </Compile>
+    <Compile Include="原始文字検索.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="原始文字登録.designer.vb">
+      <DependentUpon>原始文字登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="原始文字登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="編集文字検索.designer.vb">
+      <DependentUpon>編集文字検索.vb</DependentUpon>
+    </Compile>
+    <Compile Include="編集文字検索.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="編集文字登録.designer.vb">
+      <DependentUpon>編集文字登録.vb</DependentUpon>
+    </Compile>
+    <Compile Include="編集文字登録.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="通信.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="F_MSG.resX">
+      <DependentUpon>F_MSG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_MSG3.resX">
+      <DependentUpon>F_MSG3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWin1.resX">
+      <DependentUpon>MainWin1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sel_win1.resX">
+      <DependentUpon>sel_win1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="原始文字検索.resX">
+      <DependentUpon>原始文字検索.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="原始文字登録.resX">
+      <DependentUpon>原始文字登録.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="編集文字検索.resX">
+      <DependentUpon>編集文字検索.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="編集文字登録.resX">
+      <DependentUpon>編集文字登録.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>copy $(TargetDir)$(TargetFileName) C:\ACAD19\exe</PostBuildEvent>
+  </PropertyGroup>
+</Project>

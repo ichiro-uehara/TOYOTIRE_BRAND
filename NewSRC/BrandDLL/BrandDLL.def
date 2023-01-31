@@ -1,0 +1,15 @@
+; BrandDLL.def
+LIBRARY
+
+;CODE PRELOAD MOVEABLE DISCARDABLE
+;DATA PRELOAD MOVEABLE
+
+EXPORTS
+	ShttoHex		@1
+	InttoHex		@2
+	FlttoHex		@3
+	DbltoHex		@4
+	HextoSht		@5
+	HextoInt		@6
+	HextoFlt		@7
+	HextoDbl		@8
