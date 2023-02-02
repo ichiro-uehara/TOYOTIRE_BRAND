@@ -400,7 +400,7 @@ Module MJ_DataSet
 
         '-----------------------------------------------------------------------------
 
-        With F_HMSAVE.DataGridViewList
+        With form_no.DataGridViewList
 
             .ColumnCount = 5
             .TopLeftHeaderCell.Value = "NO"

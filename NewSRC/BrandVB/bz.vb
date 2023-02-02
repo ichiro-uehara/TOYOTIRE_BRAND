@@ -78,7 +78,8 @@ Module MJ_BZ
         sqlcmd = "SELECT *  FROM " & DBTableName & " WHERE " & key_code
 
         'ヒット数チェック
-        cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
+        '----- .NET 移行(一旦コメント化) -----
+        'cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
         If cnt > 0 Then
             ErrMsg = "Drawing number exists in the already brand drawing." & Chr(13) & "It is not possible to register a new."
             ErrTtl = "number exist error"
@@ -193,12 +194,13 @@ Module MJ_BZ
         sqlcmd = sqlcmd & ")"
 
         'ｺﾏﾝﾄﾞ実行
-        GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
-        If GL_T_RDO.Con.RowsAffected() = 0 Then
-            ErrMsg = "Can not be registered in the database.(" & DBTableName & ")"
-            ErrTtl = "SQL error"
-            GoTo error_section
-        End If
+        '----- .NET 移行(一旦コメント化) -----
+        'GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
+        'If GL_T_RDO.Con.RowsAffected() = 0 Then
+        '    ErrMsg = "Can not be registered in the database.(" & DBTableName & ")"
+        '    ErrTtl = "SQL error"
+        '    GoTo error_section
+        'End If
         ' <- watanabe edit VerUP(2011)
 
 
@@ -236,12 +238,13 @@ Module MJ_BZ
             sqlcmd = sqlcmd & " )"
 
             'ｺﾏﾝﾄﾞ実行
-            GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
-            If GL_T_RDO.Con.RowsAffected() = 0 Then
-                ErrMsg = "Can not be registered in the database.(" & DBTableName2 & ")"
-                ErrTtl = "SQL error"
-                GoTo error_section
-            End If
+            '----- .NET 移行(一旦コメント化) -----
+            'GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
+            'If GL_T_RDO.Con.RowsAffected() = 0 Then
+            '    ErrMsg = "Can not be registered in the database.(" & DBTableName2 & ")"
+            '    ErrTtl = "SQL error"
+            '    GoTo error_section
+            'End If
             ' <- watanabe edit VerUP(2011)
 
 
@@ -288,7 +291,8 @@ error_section:
         Dim key_code As String
         Dim sqlcmd As String
         Dim cnt As Integer
-        Dim Rs As RDO.rdoResultset
+        '----- .NET 移行(コメント化) -----
+        'Dim Rs As RDO.rdoResultset
         ' <- watanabe add VerUP(2011)
 
         ' -> watanabe add VerUP(2011)
@@ -342,7 +346,8 @@ error_section:
         sqlcmd = "SELECT entry_name FROM " & DBTableName & " WHERE ( " & key_code & ")"
 
         'ヒット数チェック
-        cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
+        '----- .NET 移行(一旦コメント化) -----
+        'cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
         If cnt = 0 Then
             bz_code = "(" & wk_id & "-" & wk_no1 & "-" & wk_no2 & ")"
             ErrMsg = "There is no brand drawings specified." & Chr(13) & bz_code
@@ -355,20 +360,23 @@ error_section:
         End If
 
         '検索
-        Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
-        Rs.MoveFirst()
+        '----- .NET 移行(一旦コメント化) -----
+        'Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
+        'Rs.MoveFirst()
 
-        If IsDBNull(Rs.rdoColumns(0).Value) = False Then
-            wk_entry_name = CStr(Val(Rs.rdoColumns(0).Value))
-        Else
-            wk_entry_name = ""
-        End If
-        Rs.Close()
+        'If IsDBNull(Rs.rdoColumns(0).Value) = False Then
+        '    wk_entry_name = CStr(Val(Rs.rdoColumns(0).Value))
+        'Else
+        '    wk_entry_name = ""
+        'End If
+
+        '----- .NET 移行(コメント化) -----
+        'Rs.Close()
         ' <- watanabe edit VerUP(2011)
 
 
         '   w_mess = BrandDir & wk_id & "-" & wk_no1 & "-" & wk_no2
-		w_mess = BrandDir & wk_id & wk_no1 & "-" & wk_no2
+        w_mess = BrandDir & wk_id & wk_no1 & "-" & wk_no2
 		w_ret = PokeACAD("MDLREAD", w_mess)
 		w_ret = RequestACAD("MDLREAD")
 
@@ -390,7 +398,8 @@ error_section:
 
         On Error Resume Next
         Err.Clear()
-        Rs.Close()
+
+        'Rs.Close()
 
         bz_read = FAIL
         ' <- watanabe add VerUP(2011)
@@ -413,7 +422,9 @@ error_section:
         Dim key_code As String
         Dim sqlcmd As String
         Dim cnt As Integer
-        Dim Rs As RDO.rdoResultset
+
+        '----- .NET 移行(コメント化) -----
+        'Dim Rs As RDO.rdoResultset
         ' <- watanabe add VerUP(2011)
 
         ' -> watanabe add VerUP(2011)
@@ -520,7 +531,8 @@ error_section:
         sqlcmd = "SELECT comment, dep_name, entry_name, entry_date FROM " & DBTableName & " WHERE ( " & key_code & " )"
 
         'ヒット数チェック
-        cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
+        '----- .NET 移行(一旦コメント化) -----
+        'cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
         If cnt = 0 Then
             ErrMsg = "There is no brand drawings specified"
             ErrTtl = "Brand drawing update registration"
@@ -532,38 +544,39 @@ error_section:
         End If
 
         '検索
-        Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
-        Rs.MoveFirst()
+        '----- .NET 移行(一旦コメント化) -----
+        'Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
+        'Rs.MoveFirst()
 
-        If IsDBNull(Rs.rdoColumns(0).Value) = False Then
-            temp_bz.comment = Rs.rdoColumns(0).Value
-        Else
-            temp_bz.comment = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(0).Value) = False Then
+        '    temp_bz.comment = Rs.rdoColumns(0).Value
+        'Else
+        '    temp_bz.comment = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(1).Value) = False Then
-            temp_bz.dep_name = Rs.rdoColumns(1).Value
-        Else
-            temp_bz.dep_name = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(1).Value) = False Then
+        '    temp_bz.dep_name = Rs.rdoColumns(1).Value
+        'Else
+        '    temp_bz.dep_name = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(2).Value) = False Then
-            temp_bz.entry_name = Rs.rdoColumns(2).Value
-        Else
-            temp_bz.entry_name = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(2).Value) = False Then
+        '    temp_bz.entry_name = Rs.rdoColumns(2).Value
+        'Else
+        '    temp_bz.entry_name = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(3).Value) = False Then
-            temp_bz.entry_date = Rs.rdoColumns(3).Value
-        Else
-            temp_bz.entry_date = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(3).Value) = False Then
+        '    temp_bz.entry_date = Rs.rdoColumns(3).Value
+        'Else
+        '    temp_bz.entry_date = ""
+        'End If
 
-        Rs.Close()
+        'Rs.Close()
         ' <- watanabe edit VerUP(2011)
 
-		
-		'テーブル更新
+
+        'テーブル更新
 
         ' -> watanabe edit VerUP(2011)
         '      result = sqlcmd(SqlConn, "UPDATE " & DBTableName)
@@ -629,16 +642,17 @@ error_section:
         sqlcmd = sqlcmd & " no2 = '" & form_no.w_no2.Text & "' )"
 
         'ｺﾏﾝﾄﾞ実行
-        GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
-        If GL_T_RDO.Con.RowsAffected() = 0 Then
-            ErrMsg = "Can not be registered in the database.(" & DBTableName & ")"
-            ErrTtl = "SQL error"
-            GoTo error_section
-        End If
+        '----- .NET 移行(一旦コメント化) -----
+        'GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
+        'If GL_T_RDO.Con.RowsAffected() = 0 Then
+        '    ErrMsg = "Can not be registered in the database.(" & DBTableName & ")"
+        '    ErrTtl = "SQL error"
+        '    GoTo error_section
+        'End If
         ' <- watanabe edit VerUP(2011)
 
 
-		end_sql()
+        end_sql()
 		
         'Brand Ver.3 追加
 		'現データ削除
@@ -660,12 +674,13 @@ error_section:
         sqlcmd = sqlcmd & "no2 = '" & form_no.w_no2.Text & "' )"
 
         'ｺﾏﾝﾄﾞ実行
-        GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
-        If GL_T_RDO.Con.RowsAffected() = 0 Then
-            ErrMsg = "Can not delete the existing data from the database.(" & DBTableName2 & ")"
-            ErrTtl = "SQL error"
-            GoTo error_section
-        End If
+        '----- .NET 移行(一旦コメント化) -----
+        'GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
+        'If GL_T_RDO.Con.RowsAffected() = 0 Then
+        '    ErrMsg = "Can not delete the existing data from the database.(" & DBTableName2 & ")"
+        '    ErrTtl = "SQL error"
+        '    GoTo error_section
+        'End If
         ' <- watanabe edit VerUP(2011)
 
 
@@ -703,12 +718,13 @@ error_section:
             sqlcmd = sqlcmd & w_str(5) & " )"
 
             'ｺﾏﾝﾄﾞ実行
-            GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
-            If GL_T_RDO.Con.RowsAffected() = 0 Then
-                ErrMsg = "Can not be registered in the database.(" & DBTableName2 & ")"
-                ErrTtl = "SQL error"
-                GoTo error_section
-            End If
+            '----- .NET 移行(一旦コメント化) -----
+            'GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
+            'If GL_T_RDO.Con.RowsAffected() = 0 Then
+            '    ErrMsg = "Can not be registered in the database.(" & DBTableName2 & ")"
+            '    ErrTtl = "SQL error"
+            '    GoTo error_section
+            'End If
             ' <- watanabe edit VerUP(2011)
 
 
@@ -730,7 +746,8 @@ error_section:
 
         On Error Resume Next
         Err.Clear()
-        Rs.Close()
+
+        'Rs.Close()
         ' <- watanabe add VerUP(2011)
 
         bz_update = FAIL
@@ -945,12 +962,13 @@ error_section:
         sqlcmd = sqlcmd & ")"
 
         'ｺﾏﾝﾄﾞ実行
-        GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
-        If GL_T_RDO.Con.RowsAffected() = 0 Then
-            ErrMsg = "Can not be registered in the database.(" & DBTableName & ")"
-            ErrTtl = "SQL error"
-            GoTo error_section
-        End If
+        '----- .NET 移行(一旦コメント化) -----
+        'GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
+        'If GL_T_RDO.Con.RowsAffected() = 0 Then
+        '    ErrMsg = "Can not be registered in the database.(" & DBTableName & ")"
+        '    ErrTtl = "SQL error"
+        '    GoTo error_section
+        'End If
         ' <- watanabe edit VerUP(2011)
 
 
@@ -988,12 +1006,13 @@ error_section:
             sqlcmd = sqlcmd & " )"
 
             'ｺﾏﾝﾄﾞ実行
-            GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
-            If GL_T_RDO.Con.RowsAffected() = 0 Then
-                ErrMsg = "Can not be registered in the database.(" & DBTableName2 & ")"
-                ErrTtl = "SQL error"
-                GoTo error_section
-            End If
+            '----- .NET 移行(一旦コメント化) -----
+            'GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
+            'If GL_T_RDO.Con.RowsAffected() = 0 Then
+            '    ErrMsg = "Can not be registered in the database.(" & DBTableName2 & ")"
+            '    ErrTtl = "SQL error"
+            '    GoTo error_section
+            'End If
             ' <- watanabe edit VerUP(2011)
 
 
@@ -1057,7 +1076,8 @@ error_section:
         Dim key_code As String
         Dim sqlcmd As String
         Dim cnt As Integer
-        Dim Rs As RDO.rdoResultset
+        '----- .NET 移行(コメント化) -----
+        'Dim Rs As RDO.rdoResultset
         ' <- watanabe add VerUP(2011)
 
         ' -> watanabe add VerUP(2011)
@@ -1172,7 +1192,8 @@ error_section:
         sqlcmd = "SELECT * FROM " & DBTableName & " WHERE (" & key_code & ")"
 
         'ヒット数チェック
-        cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
+        '----- .NET 移行(一旦コメント化) -----
+        'cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
         If cnt = 0 Then
             errflg = 1
             GoTo error_section
@@ -1182,198 +1203,199 @@ error_section:
         End If
 
         '検索
-        Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
-        Rs.MoveFirst()
+        '----- .NET 移行(一旦コメント化) -----
+        'Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
+        'Rs.MoveFirst()
 
-        If IsDBNull(Rs.rdoColumns(0).Value) = False Then
-            temp_bz.flag_delete = Val(Rs.rdoColumns(0).Value)
-        Else
-            temp_bz.flag_delete = 0
-        End If
+        'If IsDBNull(Rs.rdoColumns(0).Value) = False Then
+        '    temp_bz.flag_delete = Val(Rs.rdoColumns(0).Value)
+        'Else
+        '    temp_bz.flag_delete = 0
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(1).Value) = False Then
-            temp_bz.id = Rs.rdoColumns(1).Value
-        Else
-            temp_bz.id = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(1).Value) = False Then
+        '    temp_bz.id = Rs.rdoColumns(1).Value
+        'Else
+        '    temp_bz.id = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(2).Value) = False Then
-            temp_bz.no1 = Rs.rdoColumns(2).Value
-        Else
-            temp_bz.no1 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(2).Value) = False Then
+        '    temp_bz.no1 = Rs.rdoColumns(2).Value
+        'Else
+        '    temp_bz.no1 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(3).Value) = False Then
-            temp_bz.no2 = Rs.rdoColumns(3).Value
-        Else
-            temp_bz.no2 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(3).Value) = False Then
+        '    temp_bz.no2 = Rs.rdoColumns(3).Value
+        'Else
+        '    temp_bz.no2 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(4).Value) = False Then
-            temp_bz.kanri_no = Rs.rdoColumns(4).Value
-        Else
-            temp_bz.kanri_no = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(4).Value) = False Then
+        '    temp_bz.kanri_no = Rs.rdoColumns(4).Value
+        'Else
+        '    temp_bz.kanri_no = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(5).Value) = False Then
-            temp_bz.syurui = Rs.rdoColumns(5).Value
-        Else
-            temp_bz.syurui = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(5).Value) = False Then
+        '    temp_bz.syurui = Rs.rdoColumns(5).Value
+        'Else
+        '    temp_bz.syurui = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(6).Value) = False Then
-            temp_bz.syubetu = Rs.rdoColumns(6).Value
-        Else
-            temp_bz.syubetu = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(6).Value) = False Then
+        '    temp_bz.syubetu = Rs.rdoColumns(6).Value
+        'Else
+        '    temp_bz.syubetu = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(7).Value) = False Then
-            temp_bz.pattern = Rs.rdoColumns(7).Value
-        Else
-            temp_bz.pattern = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(7).Value) = False Then
+        '    temp_bz.pattern = Rs.rdoColumns(7).Value
+        'Else
+        '    temp_bz.pattern = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(8).Value) = False Then
-            temp_bz.Size = Rs.rdoColumns(8).Value
-        Else
-            temp_bz.Size = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(8).Value) = False Then
+        '    temp_bz.Size = Rs.rdoColumns(8).Value
+        'Else
+        '    temp_bz.Size = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(9).Value) = False Then
-            temp_bz.size1 = Rs.rdoColumns(9).Value
-        Else
-            temp_bz.size1 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(9).Value) = False Then
+        '    temp_bz.size1 = Rs.rdoColumns(9).Value
+        'Else
+        '    temp_bz.size1 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(10).Value) = False Then
-            temp_bz.size2 = Rs.rdoColumns(10).Value
-        Else
-            temp_bz.size2 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(10).Value) = False Then
+        '    temp_bz.size2 = Rs.rdoColumns(10).Value
+        'Else
+        '    temp_bz.size2 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(11).Value) = False Then
-            temp_bz.size3 = Rs.rdoColumns(11).Value
-        Else
-            temp_bz.size3 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(11).Value) = False Then
+        '    temp_bz.size3 = Rs.rdoColumns(11).Value
+        'Else
+        '    temp_bz.size3 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(12).Value) = False Then
-            temp_bz.size4 = Rs.rdoColumns(12).Value
-        Else
-            temp_bz.size4 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(12).Value) = False Then
+        '    temp_bz.size4 = Rs.rdoColumns(12).Value
+        'Else
+        '    temp_bz.size4 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(13).Value) = False Then
-            temp_bz.size5 = Rs.rdoColumns(13).Value
-        Else
-            temp_bz.size5 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(13).Value) = False Then
+        '    temp_bz.size5 = Rs.rdoColumns(13).Value
+        'Else
+        '    temp_bz.size5 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(14).Value) = False Then
-            temp_bz.size6 = Rs.rdoColumns(14).Value
-        Else
-            temp_bz.size6 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(14).Value) = False Then
+        '    temp_bz.size6 = Rs.rdoColumns(14).Value
+        'Else
+        '    temp_bz.size6 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(15).Value) = False Then
-            temp_bz.size7 = Rs.rdoColumns(15).Value
-        Else
-            temp_bz.size7 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(15).Value) = False Then
+        '    temp_bz.size7 = Rs.rdoColumns(15).Value
+        'Else
+        '    temp_bz.size7 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(16).Value) = False Then
-            temp_bz.size8 = Rs.rdoColumns(16).Value
-        Else
-            temp_bz.size8 = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(16).Value) = False Then
+        '    temp_bz.size8 = Rs.rdoColumns(16).Value
+        'Else
+        '    temp_bz.size8 = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(17).Value) = False Then
-            temp_bz.size_code = Rs.rdoColumns(17).Value
-        Else
-            temp_bz.size_code = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(17).Value) = False Then
+        '    temp_bz.size_code = Rs.rdoColumns(17).Value
+        'Else
+        '    temp_bz.size_code = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(18).Value) = False Then
-            temp_bz.kikaku = Rs.rdoColumns(18).Value
-        Else
-            temp_bz.kikaku = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(18).Value) = False Then
+        '    temp_bz.kikaku = Rs.rdoColumns(18).Value
+        'Else
+        '    temp_bz.kikaku = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(19).Value) = False Then
-            temp_bz.plant = Rs.rdoColumns(19).Value
-        Else
-            temp_bz.plant = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(19).Value) = False Then
+        '    temp_bz.plant = Rs.rdoColumns(19).Value
+        'Else
+        '    temp_bz.plant = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(20).Value) = False Then
-            temp_bz.plant_code = Rs.rdoColumns(20).Value
-        Else
-            temp_bz.plant_code = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(20).Value) = False Then
+        '    temp_bz.plant_code = Rs.rdoColumns(20).Value
+        'Else
+        '    temp_bz.plant_code = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(21).Value) = False Then
-            temp_bz.tos_moyou = Val(Rs.rdoColumns(21).Value)
-        Else
-            temp_bz.tos_moyou = 0
-        End If
+        'If IsDBNull(Rs.rdoColumns(21).Value) = False Then
+        '    temp_bz.tos_moyou = Val(Rs.rdoColumns(21).Value)
+        'Else
+        '    temp_bz.tos_moyou = 0
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(22).Value) = False Then
-            temp_bz.side_moyou = Val(Rs.rdoColumns(22).Value)
-        Else
-            temp_bz.side_moyou = 0
-        End If
+        'If IsDBNull(Rs.rdoColumns(22).Value) = False Then
+        '    temp_bz.side_moyou = Val(Rs.rdoColumns(22).Value)
+        'Else
+        '    temp_bz.side_moyou = 0
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(23).Value) = False Then
-            temp_bz.side_kenti = Val(Rs.rdoColumns(23).Value)
-        Else
-            temp_bz.side_kenti = 0
-        End If
+        'If IsDBNull(Rs.rdoColumns(23).Value) = False Then
+        '    temp_bz.side_kenti = Val(Rs.rdoColumns(23).Value)
+        'Else
+        '    temp_bz.side_kenti = 0
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(24).Value) = False Then
-            temp_bz.peak_mark = Val(Rs.rdoColumns(24).Value)
-        Else
-            temp_bz.peak_mark = 0
-        End If
+        'If IsDBNull(Rs.rdoColumns(24).Value) = False Then
+        '    temp_bz.peak_mark = Val(Rs.rdoColumns(24).Value)
+        'Else
+        '    temp_bz.peak_mark = 0
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(25).Value) = False Then
-            temp_bz.nasiji = Val(Rs.rdoColumns(25).Value)
-        Else
-            temp_bz.nasiji = 0
-        End If
+        'If IsDBNull(Rs.rdoColumns(25).Value) = False Then
+        '    temp_bz.nasiji = Val(Rs.rdoColumns(25).Value)
+        'Else
+        '    temp_bz.nasiji = 0
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(26).Value) = False Then
-            temp_bz.comment = Rs.rdoColumns(26).Value
-        Else
-            temp_bz.comment = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(26).Value) = False Then
+        '    temp_bz.comment = Rs.rdoColumns(26).Value
+        'Else
+        '    temp_bz.comment = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(27).Value) = False Then
-            temp_bz.dep_name = Rs.rdoColumns(27).Value
-        Else
-            temp_bz.dep_name = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(27).Value) = False Then
+        '    temp_bz.dep_name = Rs.rdoColumns(27).Value
+        'Else
+        '    temp_bz.dep_name = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(28).Value) = False Then
-            temp_bz.entry_name = Rs.rdoColumns(28).Value
-        Else
-            temp_bz.entry_name = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(28).Value) = False Then
+        '    temp_bz.entry_name = Rs.rdoColumns(28).Value
+        'Else
+        '    temp_bz.entry_name = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(29).Value) = False Then
-            Dim tmpstr As String
-            tmpstr = Rs.rdoColumns(29).Value
-            temp_bz.entry_date = Left(tmpstr, 4) & Mid(tmpstr, 6, 2) & Mid(tmpstr, 9, 2)
-        Else
-            temp_bz.entry_date = ""
-        End If
+        'If IsDBNull(Rs.rdoColumns(29).Value) = False Then
+        '    Dim tmpstr As String
+        '    tmpstr = Rs.rdoColumns(29).Value
+        '    temp_bz.entry_date = Left(tmpstr, 4) & Mid(tmpstr, 6, 2) & Mid(tmpstr, 9, 2)
+        'Else
+        '    temp_bz.entry_date = ""
+        'End If
 
-        If IsDBNull(Rs.rdoColumns(30).Value) = False Then
-            temp_bz.hm_num = Val(Rs.rdoColumns(30).Value)
-        Else
-            temp_bz.hm_num = 0
-        End If
+        'If IsDBNull(Rs.rdoColumns(30).Value) = False Then
+        '    temp_bz.hm_num = Val(Rs.rdoColumns(30).Value)
+        'Else
+        '    temp_bz.hm_num = 0
+        'End If
 
-        Rs.Close()
+        'Rs.Close()
         ' <- watanabe edit VerUP(2011)
 
 
@@ -1413,7 +1435,8 @@ error_section:
             sqlcmd = "SELECT hm_name FROM " & DBTableName2 & " WHERE ( " & key_code & " )"
 
             'ヒット数チェック
-            cnt = VBRDO_Count(GL_T_RDO, DBTableName2, key_code)
+            '----- .NET 移行(一旦コメント化) -----
+            'cnt = VBRDO_Count(GL_T_RDO, DBTableName2, key_code)
             If cnt = 0 Then
                 Exit For
             ElseIf cnt = -1 Then
@@ -1421,16 +1444,18 @@ error_section:
             End If
 
             '検索
-            Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
-            Rs.MoveFirst()
+            '----- .NET 移行(一旦コメント化) -----
+            'Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
+            'Rs.MoveFirst()
 
-            If IsDBNull(Rs.rdoColumns(0).Value) = False Then
-                temp_bz.hm_name(i) = Rs.rdoColumns(0).Value
-            Else
-                temp_bz.hm_name(i) = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(0).Value) = False Then
+            '    temp_bz.hm_name(i) = Rs.rdoColumns(0).Value
+            'Else
+            '    temp_bz.hm_name(i) = ""
+            'End If
 
-            Rs.Close()
+            '----- .NET 移行(コメント化) -----
+            'Rs.Close()
             ' <- watanabe edit VerUP(2011)
 
 
@@ -1450,7 +1475,8 @@ error_section:
 
         On Error Resume Next
         Err.Clear()
-        Rs.Close()
+        '----- .NET 移行(コメント化) -----
+        'Rs.Close()
         ' <- watanabe add VerUP(2011)
 
         bz_search = FAIL
@@ -1906,12 +1932,13 @@ error_section:
         sqlcmd = sqlcmd & " no2 = " & w_str(4) & ")"
 
         'ｺﾏﾝﾄﾞ実行
-        GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
-        If GL_T_RDO.Con.RowsAffected() = 0 Then
-            ErrMsg = "Can not be registered in the database.(" & DBTableName & ")"
-            ErrTtl = "SQL error"
-            GoTo error_section
-        End If
+        '----- .NET 移行(一旦コメント化) -----
+        'GL_T_RDO.Con.Execute(sqlcmd, RDO.OptionConstants.rdExecDirect)
+        'If GL_T_RDO.Con.RowsAffected() = 0 Then
+        '    ErrMsg = "Can not be registered in the database.(" & DBTableName & ")"
+        '    ErrTtl = "SQL error"
+        '    GoTo error_section
+        'End If
         ' <- watanabe edit VerUP(2011)
 
 
@@ -1970,7 +1997,8 @@ error_section:
         Dim key_code As String
         Dim sqlcmd As String
         Dim cnt As Integer
-        Dim Rs As RDO.rdoResultset
+        '----- .NET 移行(コメント化) -----
+        'Dim Rs As RDO.rdoResultset
         ' <- watanabe add VerUP(2011)
 
         ' -> watanabe add VerUP(2011)
@@ -2071,7 +2099,8 @@ error_section:
             sqlcmd = sqlcmd & " WHERE ( " & key_code & " )"
 
             'ヒット数チェック
-            cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
+            '----- .NET 移行(一旦コメント化) -----
+            'cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
             If cnt = 0 Then
                 MsgBox("There is no brand drawing data." & Chr(13) & "Can not modify processing.", MsgBoxStyle.Critical, "error")
                 errflg = 1
@@ -2083,160 +2112,161 @@ error_section:
             End If
 
             '検索
-            Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
-            Rs.MoveFirst()
+            '----- .NET 移行(一旦コメント化) -----
+            'Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
+            'Rs.MoveFirst()
 
-            If IsDBNull(Rs.rdoColumns(0).Value) = False Then
-                temp_bz.kanri_no = Rs.rdoColumns(0).Value
-            Else
-                temp_bz.kanri_no = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(0).Value) = False Then
+            '    temp_bz.kanri_no = Rs.rdoColumns(0).Value
+            'Else
+            '    temp_bz.kanri_no = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(1).Value) = False Then
-                temp_bz.syurui = Rs.rdoColumns(1).Value
-            Else
-                temp_bz.syurui = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(1).Value) = False Then
+            '    temp_bz.syurui = Rs.rdoColumns(1).Value
+            'Else
+            '    temp_bz.syurui = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(2).Value) = False Then
-                temp_bz.syubetu = Rs.rdoColumns(2).Value
-            Else
-                temp_bz.syubetu = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(2).Value) = False Then
+            '    temp_bz.syubetu = Rs.rdoColumns(2).Value
+            'Else
+            '    temp_bz.syubetu = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(3).Value) = False Then
-                temp_bz.pattern = Rs.rdoColumns(3).Value
-            Else
-                temp_bz.pattern = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(3).Value) = False Then
+            '    temp_bz.pattern = Rs.rdoColumns(3).Value
+            'Else
+            '    temp_bz.pattern = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(4).Value) = False Then
-                temp_bz.Size = Rs.rdoColumns(4).Value
-            Else
-                temp_bz.Size = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(4).Value) = False Then
+            '    temp_bz.Size = Rs.rdoColumns(4).Value
+            'Else
+            '    temp_bz.Size = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(5).Value) = False Then
-                temp_bz.size1 = Rs.rdoColumns(5).Value
-            Else
-                temp_bz.size1 = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(5).Value) = False Then
+            '    temp_bz.size1 = Rs.rdoColumns(5).Value
+            'Else
+            '    temp_bz.size1 = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(6).Value) = False Then
-                temp_bz.size2 = Rs.rdoColumns(6).Value
-            Else
-                temp_bz.size2 = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(6).Value) = False Then
+            '    temp_bz.size2 = Rs.rdoColumns(6).Value
+            'Else
+            '    temp_bz.size2 = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(7).Value) = False Then
-                temp_bz.size3 = Rs.rdoColumns(7).Value
-            Else
-                temp_bz.size3 = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(7).Value) = False Then
+            '    temp_bz.size3 = Rs.rdoColumns(7).Value
+            'Else
+            '    temp_bz.size3 = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(8).Value) = False Then
-                temp_bz.size4 = Rs.rdoColumns(8).Value
-            Else
-                temp_bz.size4 = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(8).Value) = False Then
+            '    temp_bz.size4 = Rs.rdoColumns(8).Value
+            'Else
+            '    temp_bz.size4 = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(9).Value) = False Then
-                temp_bz.size5 = Rs.rdoColumns(9).Value
-            Else
-                temp_bz.size5 = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(9).Value) = False Then
+            '    temp_bz.size5 = Rs.rdoColumns(9).Value
+            'Else
+            '    temp_bz.size5 = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(10).Value) = False Then
-                temp_bz.size6 = Rs.rdoColumns(10).Value
-            Else
-                temp_bz.size6 = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(10).Value) = False Then
+            '    temp_bz.size6 = Rs.rdoColumns(10).Value
+            'Else
+            '    temp_bz.size6 = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(11).Value) = False Then
-                temp_bz.size7 = Rs.rdoColumns(11).Value
-            Else
-                temp_bz.size7 = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(11).Value) = False Then
+            '    temp_bz.size7 = Rs.rdoColumns(11).Value
+            'Else
+            '    temp_bz.size7 = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(12).Value) = False Then
-                temp_bz.size8 = Rs.rdoColumns(12).Value
-            Else
-                temp_bz.size8 = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(12).Value) = False Then
+            '    temp_bz.size8 = Rs.rdoColumns(12).Value
+            'Else
+            '    temp_bz.size8 = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(13).Value) = False Then
-                temp_bz.size_code = Rs.rdoColumns(13).Value
-            Else
-                temp_bz.size_code = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(13).Value) = False Then
+            '    temp_bz.size_code = Rs.rdoColumns(13).Value
+            'Else
+            '    temp_bz.size_code = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(14).Value) = False Then
-                temp_bz.kikaku = Rs.rdoColumns(14).Value
-            Else
-                temp_bz.kikaku = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(14).Value) = False Then
+            '    temp_bz.kikaku = Rs.rdoColumns(14).Value
+            'Else
+            '    temp_bz.kikaku = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(15).Value) = False Then
-                temp_bz.plant = Rs.rdoColumns(15).Value
-            Else
-                temp_bz.plant = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(15).Value) = False Then
+            '    temp_bz.plant = Rs.rdoColumns(15).Value
+            'Else
+            '    temp_bz.plant = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(16).Value) = False Then
-                temp_bz.plant_code = Rs.rdoColumns(16).Value
-            Else
-                temp_bz.plant_code = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(16).Value) = False Then
+            '    temp_bz.plant_code = Rs.rdoColumns(16).Value
+            'Else
+            '    temp_bz.plant_code = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(17).Value) = False Then
-                temp_bz.tos_moyou = Val(Rs.rdoColumns(17).Value)
-            Else
-                temp_bz.tos_moyou = 0
-            End If
+            'If IsDBNull(Rs.rdoColumns(17).Value) = False Then
+            '    temp_bz.tos_moyou = Val(Rs.rdoColumns(17).Value)
+            'Else
+            '    temp_bz.tos_moyou = 0
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(18).Value) = False Then
-                temp_bz.side_moyou = Val(Rs.rdoColumns(18).Value)
-            Else
-                temp_bz.side_moyou = 0
-            End If
+            'If IsDBNull(Rs.rdoColumns(18).Value) = False Then
+            '    temp_bz.side_moyou = Val(Rs.rdoColumns(18).Value)
+            'Else
+            '    temp_bz.side_moyou = 0
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(19).Value) = False Then
-                temp_bz.side_kenti = Val(Rs.rdoColumns(19).Value)
-            Else
-                temp_bz.side_kenti = 0
-            End If
+            'If IsDBNull(Rs.rdoColumns(19).Value) = False Then
+            '    temp_bz.side_kenti = Val(Rs.rdoColumns(19).Value)
+            'Else
+            '    temp_bz.side_kenti = 0
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(20).Value) = False Then
-                temp_bz.peak_mark = Val(Rs.rdoColumns(20).Value)
-            Else
-                temp_bz.peak_mark = 0
-            End If
+            'If IsDBNull(Rs.rdoColumns(20).Value) = False Then
+            '    temp_bz.peak_mark = Val(Rs.rdoColumns(20).Value)
+            'Else
+            '    temp_bz.peak_mark = 0
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(21).Value) = False Then
-                temp_bz.nasiji = Val(Rs.rdoColumns(21).Value)
-            Else
-                temp_bz.nasiji = 0
-            End If
+            'If IsDBNull(Rs.rdoColumns(21).Value) = False Then
+            '    temp_bz.nasiji = Val(Rs.rdoColumns(21).Value)
+            'Else
+            '    temp_bz.nasiji = 0
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(22).Value) = False Then
-                temp_bz.comment = Rs.rdoColumns(22).Value
-            Else
-                temp_bz.comment = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(22).Value) = False Then
+            '    temp_bz.comment = Rs.rdoColumns(22).Value
+            'Else
+            '    temp_bz.comment = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(23).Value) = False Then
-                temp_bz.dep_name = Rs.rdoColumns(23).Value
-            Else
-                temp_bz.dep_name = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(23).Value) = False Then
+            '    temp_bz.dep_name = Rs.rdoColumns(23).Value
+            'Else
+            '    temp_bz.dep_name = ""
+            'End If
 
-            If IsDBNull(Rs.rdoColumns(24).Value) = False Then
-                temp_bz.entry_name = Rs.rdoColumns(24).Value
-            Else
-                temp_bz.entry_name = ""
-            End If
+            'If IsDBNull(Rs.rdoColumns(24).Value) = False Then
+            '    temp_bz.entry_name = Rs.rdoColumns(24).Value
+            'Else
+            '    temp_bz.entry_name = ""
+            'End If
 
-            Rs.Close()
+            'Rs.Close()
             ' <- watanabe add VerUP(2011)
 
 
@@ -2269,7 +2299,8 @@ error_section:
             sqlcmd = sqlcmd & " WHERE ( " & key_code & " )"
 
             'ヒット数チェック
-            cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
+            '----- .NET 移行(一旦コメント化) -----
+            'cnt = VBRDO_Count(GL_T_RDO, DBTableName, key_code)
             If cnt = -1 Then
                 errflg = 1
                 GoTo error_section
@@ -2277,201 +2308,202 @@ error_section:
             ElseIf cnt > 0 Then
 
                 '検索
-                Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
-                Rs.MoveFirst()
+                '----- .NET 移行(一旦コメント化) -----
+                'Rs = GL_T_RDO.Con.OpenResultset(sqlcmd, RDO.ResultsetTypeConstants.rdOpenKeyset, RDO.LockTypeConstants.rdConcurRowVer)
+                'Rs.MoveFirst()
 
-                Do Until Rs.EOF
+                'Do Until Rs.EOF
 
-                    If IsDBNull(Rs.rdoColumns(0).Value) = False Then
-                        temp_bz.no2 = Rs.rdoColumns(0).Value
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(0).Value) = False Then
+                '        temp_bz.no2 = Rs.rdoColumns(0).Value
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(1).Value) = False Then
-                        t1 = Rs.rdoColumns(1).Value
-                    Else
-                        t1 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(1).Value) = False Then
+                '        t1 = Rs.rdoColumns(1).Value
+                '    Else
+                '        t1 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(2).Value) = False Then
-                        t2 = Rs.rdoColumns(2).Value
-                    Else
-                        t2 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(2).Value) = False Then
+                '        t2 = Rs.rdoColumns(2).Value
+                '    Else
+                '        t2 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(3).Value) = False Then
-                        t3 = Rs.rdoColumns(3).Value
-                    Else
-                        t3 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(3).Value) = False Then
+                '        t3 = Rs.rdoColumns(3).Value
+                '    Else
+                '        t3 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(4).Value) = False Then
-                        t4 = Rs.rdoColumns(4).Value
-                    Else
-                        t4 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(4).Value) = False Then
+                '        t4 = Rs.rdoColumns(4).Value
+                '    Else
+                '        t4 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(5).Value) = False Then
-                        t5 = Rs.rdoColumns(5).Value
-                    Else
-                        t5 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(5).Value) = False Then
+                '        t5 = Rs.rdoColumns(5).Value
+                '    Else
+                '        t5 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(6).Value) = False Then
-                        t6 = Rs.rdoColumns(6).Value
-                    Else
-                        t6 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(6).Value) = False Then
+                '        t6 = Rs.rdoColumns(6).Value
+                '    Else
+                '        t6 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(7).Value) = False Then
-                        t7 = Rs.rdoColumns(7).Value
-                    Else
-                        t7 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(7).Value) = False Then
+                '        t7 = Rs.rdoColumns(7).Value
+                '    Else
+                '        t7 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(8).Value) = False Then
-                        t8 = Rs.rdoColumns(8).Value
-                    Else
-                        t8 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(8).Value) = False Then
+                '        t8 = Rs.rdoColumns(8).Value
+                '    Else
+                '        t8 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(9).Value) = False Then
-                        t9 = Rs.rdoColumns(9).Value
-                    Else
-                        t9 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(9).Value) = False Then
+                '        t9 = Rs.rdoColumns(9).Value
+                '    Else
+                '        t9 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(10).Value) = False Then
-                        t10 = Rs.rdoColumns(10).Value
-                    Else
-                        t10 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(10).Value) = False Then
+                '        t10 = Rs.rdoColumns(10).Value
+                '    Else
+                '        t10 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(11).Value) = False Then
-                        t11 = Rs.rdoColumns(11).Value
-                    Else
-                        t11 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(11).Value) = False Then
+                '        t11 = Rs.rdoColumns(11).Value
+                '    Else
+                '        t11 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(12).Value) = False Then
-                        t12 = Rs.rdoColumns(12).Value
-                    Else
-                        t12 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(12).Value) = False Then
+                '        t12 = Rs.rdoColumns(12).Value
+                '    Else
+                '        t12 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(13).Value) = False Then
-                        t13 = Rs.rdoColumns(13).Value
-                    Else
-                        t13 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(13).Value) = False Then
+                '        t13 = Rs.rdoColumns(13).Value
+                '    Else
+                '        t13 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(14).Value) = False Then
-                        t14 = Rs.rdoColumns(14).Value
-                    Else
-                        t14 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(14).Value) = False Then
+                '        t14 = Rs.rdoColumns(14).Value
+                '    Else
+                '        t14 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(15).Value) = False Then
-                        t15 = Rs.rdoColumns(15).Value
-                    Else
-                        t15 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(15).Value) = False Then
+                '        t15 = Rs.rdoColumns(15).Value
+                '    Else
+                '        t15 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(16).Value) = False Then
-                        t16 = Rs.rdoColumns(16).Value
-                    Else
-                        t16 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(16).Value) = False Then
+                '        t16 = Rs.rdoColumns(16).Value
+                '    Else
+                '        t16 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(17).Value) = False Then
-                        t17 = Rs.rdoColumns(17).Value
-                    Else
-                        t17 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(17).Value) = False Then
+                '        t17 = Rs.rdoColumns(17).Value
+                '    Else
+                '        t17 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(18).Value) = False Then
-                        t18 = CShort(Rs.rdoColumns(18).Value)
-                    Else
-                        t18 = 0
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(18).Value) = False Then
+                '        t18 = CShort(Rs.rdoColumns(18).Value)
+                '    Else
+                '        t18 = 0
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(19).Value) = False Then
-                        t19 = CShort(Rs.rdoColumns(19).Value)
-                    Else
-                        t19 = 0
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(19).Value) = False Then
+                '        t19 = CShort(Rs.rdoColumns(19).Value)
+                '    Else
+                '        t19 = 0
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(20).Value) = False Then
-                        t20 = CShort(Rs.rdoColumns(20).Value)
-                    Else
-                        t20 = 0
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(20).Value) = False Then
+                '        t20 = CShort(Rs.rdoColumns(20).Value)
+                '    Else
+                '        t20 = 0
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(21).Value) = False Then
-                        t21 = CShort(Rs.rdoColumns(21).Value)
-                    Else
-                        t21 = 0
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(21).Value) = False Then
+                '        t21 = CShort(Rs.rdoColumns(21).Value)
+                '    Else
+                '        t21 = 0
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(22).Value) = False Then
-                        t22 = CShort(Rs.rdoColumns(22).Value)
-                    Else
-                        t22 = 0
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(22).Value) = False Then
+                '        t22 = CShort(Rs.rdoColumns(22).Value)
+                '    Else
+                '        t22 = 0
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(23).Value) = False Then
-                        t23 = Rs.rdoColumns(23).Value
-                    Else
-                        t23 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(23).Value) = False Then
+                '        t23 = Rs.rdoColumns(23).Value
+                '    Else
+                '        t23 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(24).Value) = False Then
-                        t24 = Rs.rdoColumns(24).Value
-                    Else
-                        t24 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(24).Value) = False Then
+                '        t24 = Rs.rdoColumns(24).Value
+                '    Else
+                '        t24 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(25).Value) = False Then
-                        t25 = Rs.rdoColumns(25).Value
-                    Else
-                        t25 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(25).Value) = False Then
+                '        t25 = Rs.rdoColumns(25).Value
+                '    Else
+                '        t25 = ""
+                '    End If
 
-                    If IsDBNull(Rs.rdoColumns(26).Value) = False Then
-                        t26 = Rs.rdoColumns(26).Value
-                    Else
-                        t26 = ""
-                    End If
+                '    If IsDBNull(Rs.rdoColumns(26).Value) = False Then
+                '        t26 = Rs.rdoColumns(26).Value
+                '    Else
+                '        t26 = ""
+                '    End If
 
-                    temp_bz.kanri_no = t1
-                    temp_bz.syurui = t2
-                    temp_bz.syubetu = t3
-                    temp_bz.pattern = t4
-                    temp_bz.Size = t5
-                    temp_bz.size1 = t6
-                    temp_bz.size2 = t7
-                    temp_bz.size3 = t8
-                    temp_bz.size4 = t9
-                    temp_bz.size5 = t10
-                    temp_bz.size6 = t11
-                    temp_bz.size7 = t12
-                    temp_bz.size8 = t13
-                    temp_bz.size_code = t14
-                    temp_bz.kikaku = t15
-                    temp_bz.plant = t16
-                    temp_bz.plant_code = t17
-                    temp_bz.tos_moyou = t18
-                    temp_bz.side_moyou = t19
-                    temp_bz.side_kenti = t20
-                    temp_bz.peak_mark = t21
-                    temp_bz.nasiji = t22
-                    temp_bz.comment = t23
-                    temp_bz.dep_name = t24
-                    temp_bz.entry_name = t25
+                'temp_bz.kanri_no = t1
+                '    temp_bz.syurui = t2
+                '    temp_bz.syubetu = t3
+                '    temp_bz.pattern = t4
+                '    temp_bz.Size = t5
+                '    temp_bz.size1 = t6
+                '    temp_bz.size2 = t7
+                '    temp_bz.size3 = t8
+                '    temp_bz.size4 = t9
+                '    temp_bz.size5 = t10
+                '    temp_bz.size6 = t11
+                '    temp_bz.size7 = t12
+                '    temp_bz.size8 = t13
+                '    temp_bz.size_code = t14
+                '    temp_bz.kikaku = t15
+                '    temp_bz.plant = t16
+                '    temp_bz.plant_code = t17
+                '    temp_bz.tos_moyou = t18
+                '    temp_bz.side_moyou = t19
+                '    temp_bz.side_kenti = t20
+                '    temp_bz.peak_mark = t21
+                '    temp_bz.nasiji = t22
+                '    temp_bz.comment = t23
+                '    temp_bz.dep_name = t24
+                '    temp_bz.entry_name = t25
 
-                    Rs.MoveNext()
-                Loop
+                '    Rs.MoveNext()
+                'Loop
 
-                Rs.Close()
+                'Rs.Close()
             End If
 
             If open_mode = "Revision number" Then
@@ -2497,7 +2529,8 @@ error_section:
 
         On Error Resume Next
         Err.Clear()
-        Rs.Close()
+        '----- .NET 移行(コメント化) -----
+        'Rs.Close()
         ' <- watanabe add VerUP(2011)
 
         Call end_sql()

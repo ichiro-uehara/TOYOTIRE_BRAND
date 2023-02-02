@@ -353,6 +353,131 @@ namespace SpecInfo
         }
 
         /// <summary>
+        /// ＝演算子
+        /// </summary>
+        /// <param name="left">左辺</param>
+        /// <param name="right">右辺</param>
+        /// <returns>左辺＝右辺</returns>
+        public static bool operator == (SpecPrimitiveChar left, SpecPrimitiveChar right)
+        {
+            if (left is null || right is null)
+            {
+                return false;
+            }
+
+            if (left.high != right.high)
+            {
+                return false;
+            }
+            if (left.width != right.width)
+            {
+                return false;
+            }
+            if (left.ang != right.ang)
+            {
+                return false;
+            }
+
+            if (left.moji_high != right.moji_high)
+            {
+                return false;
+            }
+            if (left.moji_shift != right.moji_shift)
+            {
+                return false;
+            }
+
+            if (left.org_hor != right.org_hor)
+            {
+                return false;
+            }
+            if (left.org_ver != right.org_ver)
+            {
+                return false;
+            }
+
+            if (left.left_bottom_x != right.left_bottom_x)
+            {
+                return false;
+            }
+            if (left.left_bottom_y != right.left_bottom_y)
+            {
+                return false;
+            }
+
+            if (left.right_bottom_x != right.right_bottom_x)
+            {
+                return false;
+            }
+            if (left.right_bottom_y != right.right_bottom_y)
+            {
+                return false;
+            }
+
+            if (left.right_top_x != right.right_top_x)
+            {
+                return false;
+            }
+            if (left.right_top_y != right.right_top_y)
+            {
+                return false;
+            }
+
+            if (left.left_top_x != right.left_top_x)
+            {
+                return false;
+            }
+            if (left.left_top_y != right.left_top_y)
+            {
+                return false;
+            }
+
+            if (left.hem_width != right.hem_width)
+            {
+                return false;
+            }
+
+            if (left.hatch_ang != right.hatch_ang)
+            {
+                return false;
+            }
+            if (left.hatch_width != right.hatch_width)
+            {
+                return false;
+            }
+            if (left.hatch_space != right.hatch_space)
+            {
+                return false;
+            }
+            if (left.hatch_x != right.hatch_x)
+            {
+                return false;
+            }
+            if (left.hatch_y != right.hatch_y)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// ≠演算子
+        /// </summary>
+        /// <param name="left">左辺</param>
+        /// <param name="right">右辺</param>
+        /// <returns>左辺≠右辺</returns>
+        public static bool operator != (SpecPrimitiveChar left, SpecPrimitiveChar right)
+        {
+            if (left is null || right is null)
+            {
+                return true;
+            }
+
+            return !(left == right);
+        }
+
+        /// <summary>
         /// クローン
         /// </summary>
         /// <returns>刻印文字スペッククラスのクローン</returns>

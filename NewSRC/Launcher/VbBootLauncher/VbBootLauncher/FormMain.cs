@@ -239,9 +239,9 @@ namespace VbBootLauncher
             }
             else if (item == RequestItem.SPECADD)
             {
-                DdeCom.RequestRespons(ReqResponsType.SpecAddOK);
+                DdeCom.RequestRespons(SpecAddResp);
 
-                mes += "[応答]        SPECADD OK";
+                mes += "[応答]        " + SpecAddResp.ToString();
             }
             else if (item == RequestItem.ACADSAVE)
             {
@@ -573,6 +573,15 @@ namespace VbBootLauncher
                 // 受信データより刻印文字スペックを作成
                 SpecPrimitiveChar spec = new SpecPrimitiveChar();
                 spec.SetSpecDataByDDE(data);
+
+                if (SpecPrimitive == spec)
+                {
+                    SpecAddResp = ReqResponsType.SpecAddOK;
+                }
+                else
+                {
+                    SpecAddResp = ReqResponsType.Error;
+                }
             }
         }
 

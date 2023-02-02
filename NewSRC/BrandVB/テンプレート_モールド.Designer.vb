@@ -397,7 +397,7 @@
         Me.Location = New System.Drawing.Point(229, 132)
         Me.Name = "F_TMP_MORUDO"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Template (mold number)"
         CType(Me.ImgThumbnail1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Frame1.ResumeLayout(False)

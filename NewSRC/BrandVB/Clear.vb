@@ -136,10 +136,11 @@ Module MJ_Clear
 #If PJ_BrandVB3 Then
 
 	Sub Clear_F_TMP_UTQG()
-		'Dim F_TMP_UTQG As Object
-		
-		form_no = F_TMP_UTQG
-		
+        'Dim F_TMP_UTQG As Object
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_UTQG
+
         'form_no.w_font.ListIndex = 0
         form_no.w_font.SelectedIndex = 0 '20100628コード変更
 		form_no.w_type.Text = ""
@@ -168,9 +169,9 @@ Module MJ_Clear
         w_str = ""
         ' -> watanabe add VerUP(2011)
 
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_PLATE
 
-		form_no = F_TMP_PLATE
-		
         'form_no.w_type.ListIndex = 0
         form_no.w_type.SelectedIndex = 0 '20100628コード変更
 		
@@ -228,14 +229,15 @@ Module MJ_Clear
     End Sub
 	
 	Sub Clear_F_TMP_SIZE(ByRef clr_level As Short)
-		'Dim F_TMP_SIZE As Object
-		'  パラメータ
-		'  clr_level :0 = 全項目クリア
-		'  clr_level  1 = 編集文字項目のみクリア
-		
-		form_no = F_TMP_SIZE
-		
-		If clr_level = 0 Then
+        'Dim F_TMP_SIZE As Object
+        '  パラメータ
+        '  clr_level :0 = 全項目クリア
+        '  clr_level  1 = 編集文字項目のみクリア
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_SIZE
+
+        If clr_level = 0 Then
 			form_no.w_size1.Text = ""
 			form_no.w_size2.Text = ""
 			form_no.w_size3.Text = ""
@@ -258,14 +260,15 @@ Module MJ_Clear
 	End Sub
 	
 	Sub Clear_F_TMP_MAXLOAD(ByRef clr_level As Short)
-		'Dim F_TMP_MAXLOAD As Object
-		'  パラメータ
-		'  clr_level :0 = 全項目クリア
-		'  clr_level  1 = 規格値、作図値のみクリア
-		
-		form_no = F_TMP_MAXLOAD
-		
-		If clr_level = 0 Then
+        'Dim F_TMP_MAXLOAD As Object
+        '  パラメータ
+        '  clr_level :0 = 全項目クリア
+        '  clr_level  1 = 規格値、作図値のみクリア
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_MAXLOAD
+
+        If clr_level = 0 Then
 			form_no.w_size1.Text = ""
 			form_no.w_size2.Text = ""
 			form_no.w_size3.Text = ""
@@ -300,14 +303,15 @@ Module MJ_Clear
 	
 	
 	Sub Clear_F_TMP_SERIARU(ByRef clr_level As Short)
-		'Dim F_TMP_SERIARU As Object
-		'  パラメータ
-		'  clr_level :0 = 全項目クリア
-		'  clr_level  1 = 編集文字項目のみクリア
-		
-		form_no = F_TMP_SERIARU
-		
-		If clr_level = 0 Then
+        'Dim F_TMP_SERIARU As Object
+        '  パラメータ
+        '  clr_level :0 = 全項目クリア
+        '  clr_level  1 = 編集文字項目のみクリア
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_SERIARU
+
+        If clr_level = 0 Then
 			form_no.w_size1.Text = ""
 			form_no.w_size2.Text = ""
 			form_no.w_size3.Text = ""
@@ -329,10 +333,11 @@ Module MJ_Clear
 	End Sub
 	
 	Sub Clear_F_TMP_ENO()
-		'Dim F_TMP_ENO As Object
-		
-		form_no = F_TMP_ENO
-		
+        'Dim F_TMP_ENO As Object
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_ENO
+
         'form_no.w_font.ListIndex = 0
         form_no.w_font.SelectedIndex = 0 '20100628コード変更
 		form_no.w_type.Text = ""
@@ -360,10 +365,11 @@ Module MJ_Clear
 	End Sub
 	
 	Sub Clear_F_TMP_PLY()
-		'Dim F_TMP_PLY As Object
-		
-		form_no = F_TMP_PLY
-		
+        'Dim F_TMP_PLY As Object
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_PLY
+
         'form_no.w_font.ListIndex = 0
         form_no.w_font.SelectedIndex = 0 '20100628コード変更
 		form_no.w_type.Text = ""
@@ -382,10 +388,11 @@ Module MJ_Clear
 	End Sub
 	
 	Sub Clear_F_TMP_PLY2()
-		'Dim F_TMP_PLY2 As Object
-		
-		form_no = F_TMP_PLY2
-		
+        'Dim F_TMP_PLY2 As Object
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_PLY2
+
         'form_no.w_font.ListIndex = 0
         form_no.w_font.SelectedIndex = 0 '20100628コード変更
 		form_no.w_type.Text = ""
@@ -405,10 +412,11 @@ Module MJ_Clear
 	
 	Sub Clear_F_TMP_ETC()
 		Dim i As Object
-		'Dim F_TMP_ETC As Object
-		
-		form_no = F_TMP_ETC
-		
+        'Dim F_TMP_ETC As Object
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_ETC
+
         'form_no.w_font.ListIndex = 0
         form_no.w_font.SelectedIndex = 0 '20100628コード変更
 		form_no.w_type.Text = ""
@@ -426,14 +434,15 @@ Module MJ_Clear
 	
 	
 	Sub Clear_F_TMP_KAJUU(ByRef clr_level As Short)
-		'Dim F_TMP_KAJUU As Object
-		'  パラメータ
-		'  clr_level :0 = 全項目クリア
-		'  clr_level  1 = 編集文字項目のみクリア
-		
-		form_no = F_TMP_KAJUU
-		
-		If clr_level = 0 Then
+        'Dim F_TMP_KAJUU As Object
+        '  パラメータ
+        '  clr_level :0 = 全項目クリア
+        '  clr_level  1 = 編集文字項目のみクリア
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_KAJUU
+
+        If clr_level = 0 Then
 			form_no.w_size1.Text = ""
 			form_no.w_size2.Text = ""
 			form_no.w_size3.Text = ""
@@ -482,10 +491,11 @@ Module MJ_Clear
 	' -> watanabe add 2007.03
 	
 	Sub Clear_F_TMP_UTQG3()
-		'Dim F_TMP_UTQG3 As Object
-		
-		form_no = F_TMP_UTQG3
-		
+        'Dim F_TMP_UTQG3 As Object
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_UTQG3
+
         'form_no.w_font.ListIndex = 0
         form_no.w_font.SelectedIndex = 0 '20100628コード変更
 		form_no.w_type.Text = ""
@@ -498,14 +508,15 @@ Module MJ_Clear
 	End Sub
 	
 	Sub Clear_F_TMP_MAXLOAD3(ByRef clr_level As Short)
-		'Dim F_TMP_MAXLOAD3 As Object
-		'  パラメータ
-		'  clr_level :0 = 全項目クリア
-		'  clr_level  1 = 規格値、作図値のみクリア
-		
-		form_no = F_TMP_MAXLOAD3
-		
-		If clr_level = 0 Then
+        'Dim F_TMP_MAXLOAD3 As Object
+        '  パラメータ
+        '  clr_level :0 = 全項目クリア
+        '  clr_level  1 = 規格値、作図値のみクリア
+
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_MAXLOAD3
+
+        If clr_level = 0 Then
 			form_no.w_size1.Text = ""
 			form_no.w_size2.Text = ""
 			form_no.w_size3.Text = ""
@@ -537,7 +548,8 @@ Module MJ_Clear
     Sub Clear_F_TMP_PLY1_3()
         'Dim F_TMP_PLY1_3 As Object
 
-        form_no = F_TMP_PLY1_3
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_PLY1_3
 
         'form_no.w_font.ListIndex = 0
         form_no.w_font.SelectedIndex = 0 '20100628コード変更
@@ -555,7 +567,8 @@ Module MJ_Clear
     Sub Clear_F_TMP_PLY2_3()
         'Dim F_TMP_PLY2_3 As Object
 
-        form_no = F_TMP_PLY2_3
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_PLY2_3
 
         'form_no.w_font.ListIndex = 0
         form_no.w_font.SelectedIndex = 0 '20100628コード変更
@@ -574,7 +587,8 @@ Module MJ_Clear
         Dim i As Object
         'Dim F_TMP_ETC3 As Object
 
-        form_no = F_TMP_ETC3
+        '----- .NET 移行(一旦コメント化) -----
+        'form_no = F_TMP_ETC3
 
         'form_no.w_font.ListIndex = 0
         form_no.w_font.SelectedIndex = 0 '20100628コード変更

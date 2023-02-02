@@ -106,13 +106,12 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\vblib\VBADO.vb">
+      <Link>VBADO.vb</Link>
+    </Compile>
     <Compile Include="..\vblib\VBLIB.vb">
       <Link>VBLIB.vb</Link>
     </Compile>
-    <Compile Include="..\vblib\VBRDO.vb">
-      <Link>VBRDO.vb</Link>
-    </Compile>
-    <Compile Include="ADO_VBRDO.vb" />
     <Compile Include="AssemblyInfo.vb" />
     <Compile Include="BrandDLL.vb">
       <SubType>Code</SubType>
@@ -177,178 +176,11 @@
     <Compile Include="what.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="テンプレート_ENO.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_ENO.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_ENO.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_ETC.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_ETC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_ETC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_ETC3.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_ETC3.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_ETC3.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_MARK.Designer.vb">
-      <DependentUpon>テンプレート_MARK.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_MARK.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_MAXLOAD.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_MAXLOAD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_MAXLOAD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_MAXLOAD3.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_MAXLOAD3.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_MAXLOAD3.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_PLY.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_PLY.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_PLY.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_PLY1_3.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_PLY1_3.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_PLY1_3.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_PLY2.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_PLY2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_PLY2.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_PLY2_3.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_PLY2_3.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_PLY2_3.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_PR2.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_PR2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_PR2.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_UTQG.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_UTQG.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_UTQG.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_UTQG3.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_UTQG3.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_UTQG3.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_サイズ.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_サイズ.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_サイズ.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_サイズ２.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_サイズ２.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_サイズ２.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_セリアル.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_セリアル.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_セリアル.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_パターンコード.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_パターンコード.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_パターンコード.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_パターンコード２.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_パターンコード２.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_パターンコード２.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_プレート.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_プレート.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_プレート.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="テンプレート_モールド.Designer.vb">
       <SubType>Code</SubType>
       <DependentUpon>テンプレート_モールド.vb</DependentUpon>
     </Compile>
     <Compile Include="テンプレート_モールド.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_耐久空気圧表示２.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_耐久空気圧表示２.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_耐久空気圧表示２.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_荷重指数.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_荷重指数.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_荷重指数.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_荷重指数２Ｄ.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_荷重指数２Ｄ.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_荷重指数２Ｄ.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_荷重指数２Ｓ.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_荷重指数２Ｓ.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_荷重指数２Ｓ.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="テンプレート_ＬＴ２.Designer.vb">
-      <SubType>Code</SubType>
-      <DependentUpon>テンプレート_ＬＴ２.vb</DependentUpon>
-    </Compile>
-    <Compile Include="テンプレート_ＬＴ２.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="通信.vb">
@@ -368,81 +200,8 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_ENO.resX">
-      <DependentUpon>テンプレート_ENO.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_ETC.resX">
-      <DependentUpon>テンプレート_ETC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_ETC3.resX">
-      <DependentUpon>テンプレート_ETC3.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_MARK.resx">
-      <DependentUpon>テンプレート_MARK.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_MAXLOAD.resX">
-      <DependentUpon>テンプレート_MAXLOAD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_MAXLOAD3.resX">
-      <DependentUpon>テンプレート_MAXLOAD3.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_PLY.resX">
-      <DependentUpon>テンプレート_PLY.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_PLY1_3.resX">
-      <DependentUpon>テンプレート_PLY1_3.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_PLY2.resX">
-      <DependentUpon>テンプレート_PLY2.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_PLY2_3.resX">
-      <DependentUpon>テンプレート_PLY2_3.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_PR2.resX">
-      <DependentUpon>テンプレート_PR2.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_UTQG.resX">
-      <DependentUpon>テンプレート_UTQG.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_UTQG3.resX">
-      <DependentUpon>テンプレート_UTQG3.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_サイズ.resX">
-      <DependentUpon>テンプレート_サイズ.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_サイズ２.resX">
-      <DependentUpon>テンプレート_サイズ２.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_セリアル.resX">
-      <DependentUpon>テンプレート_セリアル.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_パターンコード.resX">
-      <DependentUpon>テンプレート_パターンコード.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_パターンコード２.resX">
-      <DependentUpon>テンプレート_パターンコード２.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_プレート.resX">
-      <DependentUpon>テンプレート_プレート.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="テンプレート_モールド.resX">
       <DependentUpon>テンプレート_モールド.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_耐久空気圧表示２.resX">
-      <DependentUpon>テンプレート_耐久空気圧表示２.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_荷重指数.resX">
-      <DependentUpon>テンプレート_荷重指数.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_荷重指数２Ｄ.resX">
-      <DependentUpon>テンプレート_荷重指数２Ｄ.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_荷重指数２Ｓ.resX">
-      <DependentUpon>テンプレート_荷重指数２Ｓ.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="テンプレート_ＬＴ２.resX">
-      <DependentUpon>テンプレート_ＬＴ２.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -473,6 +232,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
     <PreBuildEvent>

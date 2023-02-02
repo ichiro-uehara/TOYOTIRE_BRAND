@@ -212,31 +212,31 @@ error_section:
                 '================
                 '// テンプレート(サイズ)画面
                 If VB.Left(Command_Line, 8) = "TMPSIZE1" Then
-                    FreePicNum = 0
-                    CommunicateMode = comNone
-                    ScreenName = "TMPSIZE1"
-                    F_TMP_SIZE.Show()
-                    'form_main.text2.Text = ""  Form_LoadでSPECDATAをReqestしているため
+                    '----- .NET 移行(一旦コメント化) -----
+                    'FreePicNum = 0
+                    'CommunicateMode = comNone
+                    'ScreenName = "TMPSIZE1"
+                    'F_TMP_SIZE.Show()
 
                     '// テンプレート(荷重指数)画面
                 ElseIf VB.Left(Command_Line, 8) = "TMPKAJU1" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Load1_ini)
-                    ret = set_read2(w_w_str, "load1")
-                    FreePicNum = 0
-                    ScreenName = "TMPKAJU1"
-                    F_TMP_KAJUU.Show()
-                    'form_main.text2.Text = ""  Form_LoadでSPECDATAをReqestしているため
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Load1_ini)
+                    'ret = set_read2(w_w_str, "load1")
+                    'FreePicNum = 0
+                    'ScreenName = "TMPKAJU1"
+                    'F_TMP_KAJUU.Show()
 
                     '// テンプレート(セリアル)画面
                 ElseIf VB.Left(Command_Line, 7) = "TMPSERI" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Serial1_ini)
-                    ret = set_read2(w_w_str, "serial1")
-                    FreePicNum = 0
-                    ScreenName = "TMPSERI "
-                    F_TMP_SERIARU.Show()
-                    'form_main.text2.Text = ""  Form_LoadでSPECDATAをReqestしているため
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Serial1_ini)
+                    'ret = set_read2(w_w_str, "serial1")
+                    'FreePicNum = 0
+                    'ScreenName = "TMPSERI "
+                    'F_TMP_SERIARU.Show()
 
                     '// テンプレート(モールド番号)画面
                 ElseIf VB.Left(Command_Line, 7) = "TMPMOLD" Then
@@ -250,242 +250,209 @@ error_section:
 
                     '// テンプレート(ENO)画面
                 ElseIf VB.Left(Command_Line, 6) = "TMPENO" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_E_no1_ini)
-                    ret = set_read2(w_w_str, "e_no1")
-                    ScreenName = "TMPENO  "
-                    CommunicateMode = comNone
-                    F_TMP_ENO.Show()
-                    'form_main.text2.Text = ""  Form_LoadでPICEMPTYをReqestしているため
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_E_no1_ini)
+                    'ret = set_read2(w_w_str, "e_no1")
+                    'ScreenName = "TMPENO  "
+                    'CommunicateMode = comNone
+                    'F_TMP_ENO.Show()
 
-                    '***** 12/8 1997 yamamoto start *****
                     '// テンプレート(PTNCODE)画面
                 ElseIf VB.Left(Command_Line, 8) = "TMPPTRN1" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Pattern1_ini)
-                    ret = set_read2(w_w_str, "pattern_code1")
-                    ScreenName = "TMPPTN1"
-                    CommunicateMode = comNone
-                    F_TMP_PTNCODE.Show()
-                    'form_main.text2.Text = ""  Form_LoadでPICEMPTYをReqestしているため
-                    '***** 12/8 1997 yamamoto end *****
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Pattern1_ini)
+                    'ret = set_read2(w_w_str, "pattern_code1")
+                    'ScreenName = "TMPPTN1"
+                    'CommunicateMode = comNone
+                    'F_TMP_PTNCODE.Show()
 
                     '// テンプレート(UTQG)画面
                     ' -> watanabe edit 2007.03
                     '            ElseIf Left$(Command_Line, 7) = "TMPUTQG" Then
                 ElseIf VB.Left(Command_Line, 8) = "TMPUTQG1" Then
-                    ' <- watanabe edit 2007.03
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Utqg1_ini)
-                    ret = set_read2(w_w_str, "utqg1")
-                    ' -> watanabe edit 2007.03
-                    '                ScreenName = "TMPUTQG "
-                    ScreenName = "TMPUTQG1"
-                    ' <- watanabe edit 2007.03
-                    CommunicateMode = comNone
-                    F_TMP_UTQG.Show()
-                    'form_main.text2.Text = ""  Form_LoadでPICEMPTYをReqestしているため
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Utqg1_ini)
+                    'ret = set_read2(w_w_str, "utqg1")
+                    'ScreenName = "TMPUTQG1"
+                    'CommunicateMode = comNone
+                    'F_TMP_UTQG.Show()
 
                     '// テンプレート(MAXLOAD)画面
-                    ' -> watanabe edit 2007.03
-                    '            ElseIf Left$(Command_Line, 8) = "TMPMAXLD" Then
                 ElseIf VB.Left(Command_Line, 9) = "TMPMAXLD1" Then
-                    ' <- watanabe edit 2007.03
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Maxload1_ini)
-                    ret = set_read2(w_w_str, "max_load1")
-                    ' -> watanabe edit 2007.03
-                    '                ScreenName = "TMPMAXLD"
-                    ScreenName = "TMPMAXLD1"
-                    ' <- watanabe edit 2007.03
-                    CommunicateMode = comNone
-                    F_TMP_MAXLOAD.Show()
-                    'form_main.text2.Text = ""  Form_LoadでSPECDATAをReqestしているため
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Maxload1_ini)
+                    'ret = set_read2(w_w_str, "max_load1")
+                    'ScreenName = "TMPMAXLD1"
+                    'CommunicateMode = comNone
+                    'F_TMP_MAXLOAD.Show()
 
                     '// テンプレート(PLY1)画面
-                    ' -> watanabe edit 2007.03
-                    '            ElseIf Left$(Command_Line, 7) = "TMPPLY1" Then
                 ElseIf VB.Left(Command_Line, 9) = "TMPPLY1_1" Then
-                    ' <- watanabe edit 2007.03
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Ply1_ini)
-                    ret = set_read2(w_w_str, "ply1")
-                    ' -> watanabe edit 2007.03
-                    '                ScreenName = "TMPPRY  "
-                    ScreenName = "TMPPRY1_1"
-                    ' <- watanabe edit 2007.03
-                    CommunicateMode = comNone
-                    F_TMP_PLY.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Ply1_ini)
+                    'ret = set_read2(w_w_str, "ply1")
+                    'ScreenName = "TMPPRY1_1"
+                    'CommunicateMode = comNone
+                    'F_TMP_PLY.Show()
 
-                    'Brand Ver.4 追加
                     '// テンプレート(PLY2)画面
-                    ' -> watanabe edit 2007.03
-                    '            ElseIf Left$(Command_Line, 7) = "TMPPLY2" Then
                 ElseIf VB.Left(Command_Line, 9) = "TMPPLY2_1" Then
-                    ' <- watanabe edit 2007.03
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Ply2_ini)
-                    ret = set_read2(w_w_str, "ply2")
-                    ' -> watanabe edit 2007.03
-                    '                ScreenName = "TMPPRY2 "
-                    ScreenName = "TMPPRY2_1"
-                    ' <- watanabe edit 2007.03
-                    CommunicateMode = comNone
-                    F_TMP_PLY2.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Ply2_ini)
+                    'ret = set_read2(w_w_str, "ply2")
+                    'ScreenName = "TMPPRY2_1"
+                    'CommunicateMode = comNone
+                    'F_TMP_PLY2.Show()
 
                     '// テンプレート(ETC)画面
-                    ' -> watanabe edit 2007.03
-                    '            ElseIf Left$(Command_Line, 6) = "TMPETC" Then
                 ElseIf VB.Left(Command_Line, 7) = "TMPETC1" Then
-                    ' <- watanabe edit 2007.03
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_ETC_ini)
-                    ret = set_read2(w_w_str, "etc")
-                    ' -> watanabe edit 2007.03
-                    '                ScreenName = "TMPETC "
-                    ScreenName = "TMPETC1"
-                    ' <- watanabe edit 2007.03
-                    CommunicateMode = comNone
-                    F_TMP_ETC.Show()
-                    'form_main.text2.Text = ""  Form_LoadでPICEMPTYをReqestしているため
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_ETC_ini)
+                    'ret = set_read2(w_w_str, "etc")
+                    'ScreenName = "TMPETC1"
+                    'CommunicateMode = comNone
+                    'F_TMP_ETC.Show()
 
                     '// テンプレート(ﾌﾟﾚｰﾄ)画面
                 ElseIf VB.Left(Command_Line, 8) = "TMPPLATE" Then
-                    FreePicNum = 0
-                    ScreenName = "TMPPLATE"
-                    F_TMP_PLATE.Show()
-                    'form_main.text2.Text = ""  Form_LoadでPICEMPTYをReqestしているため
+                    '----- .NET 移行(一旦コメント化) -----
+                    'FreePicNum = 0
+                    'ScreenName = "TMPPLATE"
+                    'F_TMP_PLATE.Show()
 
-                    '(Brand System Ver.3 追加)
                     '// テンプレート(PTNCODE) タイプ2 画面
                 ElseIf VB.Left(Command_Line, 8) = "TMPPTRN2" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Pattern2_ini)
-                    ret = set_read2(w_w_str, "pattern_code2")
-                    ScreenName = "TMPPTN2"
-                    CommunicateMode = comNone
-                    F_TMP_PTNCODE2.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Pattern2_ini)
+                    'ret = set_read2(w_w_str, "pattern_code2")
+                    'ScreenName = "TMPPTN2"
+                    'CommunicateMode = comNone
+                    'F_TMP_PTNCODE2.Show()
 
-                    '(Brand System Ver.3 追加)
                     '// テンプレート(SIZE) タイプ2 画面
                 ElseIf VB.Left(Command_Line, 8) = "TMPSIZE2" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Size2_ini)
-                    ret = set_read2(w_w_str, "size2")
-                    ScreenName = "TMPSIZE2"
-                    CommunicateMode = comNone
-                    F_TMP_SIZE2.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Size2_ini)
+                    'ret = set_read2(w_w_str, "size2")
+                    'ScreenName = "TMPSIZE2"
+                    'CommunicateMode = comNone
+                    'F_TMP_SIZE2.Show()
 
-                    '(Brand System Ver.3 追加)
                     '// テンプレート(LOAD) タイプ2 (S) 画面
                 ElseIf VB.Left(Command_Line, 8) = "TMPKAJ2S" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Load2S_ini)
-                    ret = set_read2(w_w_str, "load2S")
-                    ScreenName = "TMPKAJ2S"
-                    CommunicateMode = comNone
-                    F_TMP_KAJUU2S.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Load2S_ini)
+                    'ret = set_read2(w_w_str, "load2S")
+                    'ScreenName = "TMPKAJ2S"
+                    'CommunicateMode = comNone
+                    'F_TMP_KAJUU2S.Show()
 
-                    '(Brand System Ver.3 追加)
                     '// テンプレート(LOAD) タイプ2 (D) 画面
                 ElseIf VB.Left(Command_Line, 8) = "TMPKAJ2D" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Load2D_ini)
-                    ret = set_read2(w_w_str, "load2D")
-                    ScreenName = "TMPKAJ2D"
-                    CommunicateMode = comNone
-                    F_TMP_KAJUU2D.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Load2D_ini)
+                    'ret = set_read2(w_w_str, "load2D")
+                    'ScreenName = "TMPKAJ2D"
+                    'CommunicateMode = comNone
+                    'F_TMP_KAJUU2D.Show()
 
-                    '(Brand System Ver.3 追加)
                     '// テンプレート(LT) タイプ2 画面
                 ElseIf VB.Left(Command_Line, 6) = "TMPLT2" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Lt2_ini)
-                    ret = set_read2(w_w_str, "lt2")
-                    ScreenName = "TMPLT2"
-                    CommunicateMode = comNone
-                    F_TMP_LT2.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Lt2_ini)
+                    'ret = set_read2(w_w_str, "lt2")
+                    'ScreenName = "TMPLT2"
+                    'CommunicateMode = comNone
+                    'F_TMP_LT2.Show()
 
-                    '(Brand System Ver.3 追加)
                     '// テンプレート(PR) タイプ2 画面
                 ElseIf VB.Left(Command_Line, 6) = "TMPPR2" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Pr2_ini)
-                    ret = set_read2(w_w_str, "pr2")
-                    ScreenName = "TMPPR2"
-                    CommunicateMode = comNone
-                    F_TMP_PR2.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Pr2_ini)
+                    'ret = set_read2(w_w_str, "pr2")
+                    'ScreenName = "TMPPR2"
+                    'CommunicateMode = comNone
+                    'F_TMP_PR2.Show()
 
-                    '(Brand System Ver.3 追加)
                     '// テンプレート(PSI) タイプ2 画面
                 ElseIf VB.Left(Command_Line, 7) = "TMPPSI2" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Psi2_ini)
-                    ret = set_read2(w_w_str, "psi2")
-                    ScreenName = "TMPPSI2"
-                    CommunicateMode = comNone
-                    F_TMP_PSI2.Show()
-
-
-                    ' -> watanabe add 2007.03
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Psi2_ini)
+                    'ret = set_read2(w_w_str, "psi2")
+                    'ScreenName = "TMPPSI2"
+                    'CommunicateMode = comNone
+                    'F_TMP_PSI2.Show()
 
                     '// テンプレート(UTQG3)画面
                 ElseIf VB.Left(Command_Line, 8) = "TMPUTQG3" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Utqg3_ini)
-                    ret = set_read2(w_w_str, "utqg3")
-                    ScreenName = "TMPUTQG3"
-                    CommunicateMode = comNone
-                    F_TMP_UTQG3.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Utqg3_ini)
+                    'ret = set_read2(w_w_str, "utqg3")
+                    'ScreenName = "TMPUTQG3"
+                    'CommunicateMode = comNone
+                    'F_TMP_UTQG3.Show()
 
                     '// テンプレート(MAXLOAD3)画面
                 ElseIf VB.Left(Command_Line, 9) = "TMPMAXLD3" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Maxload3_ini)
-                    ret = set_read2(w_w_str, "max_load3")
-                    ScreenName = "TMPMAXLD3"
-                    CommunicateMode = comNone
-                    F_TMP_MAXLOAD3.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Maxload3_ini)
+                    'ret = set_read2(w_w_str, "max_load3")
+                    'ScreenName = "TMPMAXLD3"
+                    'CommunicateMode = comNone
+                    'F_TMP_MAXLOAD3.Show()
 
                     '// テンプレート(PLY1_3)画面
                 ElseIf VB.Left(Command_Line, 9) = "TMPPLY1_3" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Ply1_3_ini)
-                    ret = set_read2(w_w_str, "ply1_3")
-                    ScreenName = "TMPPRY1_3"
-                    CommunicateMode = comNone
-                    F_TMP_PLY1_3.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Ply1_3_ini)
+                    'ret = set_read2(w_w_str, "ply1_3")
+                    'ScreenName = "TMPPRY1_3"
+                    'CommunicateMode = comNone
+                    'F_TMP_PLY1_3.Show()
 
                     '// テンプレート(PLY2_3)画面
                 ElseIf VB.Left(Command_Line, 9) = "TMPPLY2_3" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_Ply2_3_ini)
-                    ret = set_read2(w_w_str, "ply2_3")
-                    ScreenName = "TMPPRY2_3"
-                    CommunicateMode = comNone
-                    F_TMP_PLY2_3.Show()
+                    '----- .NET 移行(一旦コメント化) -----
+                    'w_w_str = Environ("ACAD_SET")
+                    'w_w_str = Trim(w_w_str) & Trim(Tmp_Ply2_3_ini)
+                    'ret = set_read2(w_w_str, "ply2_3")
+                    'ScreenName = "TMPPRY2_3"
+                    'CommunicateMode = comNone
+                    'F_TMP_PLY2_3.Show()
 
                     '// テンプレート(ETC)画面
                 ElseIf VB.Left(Command_Line, 7) = "TMPETC3" Then
-                    w_w_str = Environ("ACAD_SET")
-                    w_w_str = Trim(w_w_str) & Trim(Tmp_ETC3_ini)
-                    ret = set_read2(w_w_str, "etc3")
-                    ScreenName = "TMPETC3"
-                    CommunicateMode = comNone
-                    F_TMP_ETC3.Show()
-
-                    '2014/12/12 moriya add start
-                    '// テンプレート(Mark)画面
-                ElseIf VB.Left(Command_Line, 7) = "TMPMARK" Then
+                    '----- .NET 移行(一旦コメント化) -----
                     'w_w_str = Environ("ACAD_SET")
                     'w_w_str = Trim(w_w_str) & Trim(Tmp_ETC3_ini)
                     'ret = set_read2(w_w_str, "etc3")
-                    ScreenName = "TMPMARK"
-                    CommunicateMode = comNone
-                    F_TMP_MARK.Show()
-                    '2014/12/12 moriya add end
+                    'ScreenName = "TMPETC3"
+                    'CommunicateMode = comNone
+                    'F_TMP_ETC3.Show()
 
-                    ' <- watanabe add 2007.03
+                    '// テンプレート(Mark)画面
+                ElseIf VB.Left(Command_Line, 7) = "TMPMARK" Then
+                    '----- .NET 移行(一旦コメント化) -----
+                    'ScreenName = "TMPMARK"
+                    'CommunicateMode = comNone
+                    'F_TMP_MARK.Show()
 
                 Else
                     MsgBox("That isn't ready yet. [" & VB.Left(Command_Line, 8) & "]")

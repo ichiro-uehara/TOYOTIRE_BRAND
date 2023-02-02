@@ -103,10 +103,10 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\SRC\vblib\VBADO.vb">
+    <Compile Include="..\vblib\VBADO.vb">
       <Link>VBADO.vb</Link>
     </Compile>
-    <Compile Include="..\..\SRC\vblib\VBLIB.vb">
+    <Compile Include="..\vblib\VBLIB.vb">
       <Link>VBLIB.vb</Link>
     </Compile>
     <Compile Include="AssemblyInfo.vb" />
